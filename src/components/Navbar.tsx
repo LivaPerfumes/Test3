@@ -29,7 +29,7 @@ export default function Navbar() {
       
           {/* Title - Center */}
           <div className="absolute left-1/2 transform -translate-x-1/2">
-            <h1 className="text-xl md:text-6xl lg:text-2xl font-extrabold text-black-300 hover:text-yellow-400"
+            <h1 className="text-xl md:text-6xl lg:text-2xl font-extrabold text-black-300 hover:text-black-200"
               style={{ fontFamily: "'Montserrat', sans-serif" }}>
               Liva Perfumes
             </h1>
