@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { products } from '../data/products';
 import { Category } from '../types';
 import ProductCard from '../components/ProductCard';
+import Footer from '../components/Footer';
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState<Category>('all');
@@ -53,6 +54,8 @@ export default function Products() {
           ))}
         </div>
       </div>
+      {/* ✅ Footer added here */}
+            <Footer />
     </div>
   );
 }

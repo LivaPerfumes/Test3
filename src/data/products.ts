@@ -29,7 +29,8 @@ export const products: Product[] = [
     price: 999,
     image: 'https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=1200',
     category: 'fresh',
-    size: '75ml'
+    size: '75ml',
+    featured: true
   },
   {
     id: '4',
@@ -39,7 +40,7 @@ export const products: Product[] = [
     image: 'https://i.pinimg.com/474x/83/8a/4e/838a4e3474e6efc356a462d4d2b6262d.jpg',
     category: 'floral',
     size: '50ml',
-    isNew: true
+    //isNew: true
   },
   {
     id: '5',
@@ -67,7 +68,7 @@ export const products: Product[] = [
     image: 'https://i.pinimg.com/474x/14/d1/07/14d10796371c6ffc6e59c4e759dde827.jpg',
     category: 'floral',
     size: '50ml',
-    isNew: true
+    //isNew: true
   },
   {
     id: '8',
