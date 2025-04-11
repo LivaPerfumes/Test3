@@ -17,8 +17,8 @@ export default function Footer() {
               >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a
-                href="https://www.instagram.com/livaperfumes_/"
+              <a 
+                href="https://wa.me/917902524012?text=hi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-400"
