@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <div className="relative h-96">
               <img
-                src="public/shared image.png"
+                src="public/shared_image.png"
                 alt="About Liva"
                 className="absolute inset-0 w-full h-full object-cover rounded-lg"
               />
