@@ -17,10 +17,10 @@ export default function Navbar() {
                 src={`${import.meta.env.BASE_URL}logo.png`} 
                 alt="Liva Perfumes Logo"
                 style={{ 
-                  height: '65px', 
-                  width: 'auto',
+                  height: '60px', 
+                  width: '65px',
                   marginLeft: '-10px', 
-                  marginTop: '120px', 
+                  marginTop: '105px', 
                   transform: 'scale(5.4)',
                 }}
               />

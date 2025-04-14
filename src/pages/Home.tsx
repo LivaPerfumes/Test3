@@ -31,7 +31,7 @@ export default function Home() {
         {heroImages.map((img, index) => (
           <div
             key={index}
-            className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -72,7 +72,17 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {newProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={Number(product.id)}
+              product={{
+                ...product,
+                id: Number(product.id),
+                topNote: product.topNote ?? '',
+                middleNote: product.middleNote ?? '',
+                baseNote: product.baseNote ?? '',
+                ml: product.ml ?? 'N/A',
+              }}
+            />
           ))}
         </div>
       </section>
@@ -85,7 +95,16 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={Number(product.id)}
+              product={{
+                ...product,
+                id: Number(product.id),
+                topNote: product.topNote ?? '',
+                middleNote: product.middleNote ?? '',
+                baseNote: product.baseNote ?? '',
+              }}
+            />
           ))}
         </div>
       </section>
