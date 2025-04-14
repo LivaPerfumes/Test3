@@ -23,7 +23,7 @@ export const products: LocalProduct[] = [
     description: 'Elegant blend of rose and oud with a hint on essence of Love!.',
     price: 349,
     // image: 'https://i.pinimg.com/474x/d7/6d/d1/d76dd164e65ef06bcaa2ff0cd6f5b2ef.jpg',
-    image: 'public/product_photo/a1.jpg',
+    image: 'public/aa.png',
     category: 'floral',
    //size'50ml',
     featured: true,
