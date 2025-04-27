@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Twitter, Phone } from 'lucide-react';
+import { Instagram, MessageCircle, Phone,  } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -10,36 +10,37 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com/livaperfumes"
+                href="https://www.instagram.com/livaperfumes_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-400"
               >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a
-                href="https://twitter.com/livaperfumes"
+              <a 
+                href="https://wa.me/917902524012?text=Hey Liva! I would like to know more about your products."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-purple-400"
               >
-                <Twitter className="h-6 w-6" />
+                <MessageCircle className="h-6 w-6" />
               </a>
+              
               <a
-                href="https://wa.me/1234567890"
-                target="_blank"
-                rel="noopener noreferrer"
+                 href="tel:+917902524012"
                 className="hover:text-purple-400"
               >
                 <Phone className="h-6 w-6" />
               </a>
+
+
             </div>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <p>Email: contact@livaperfumes.com</p>
-            <p>Phone: +1 234 567 890</p>
+            <p>Phone: +91 790 252 4012</p>
           </div>
 
           <div>

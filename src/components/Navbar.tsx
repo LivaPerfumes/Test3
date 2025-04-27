@@ -15,11 +15,17 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo - Left */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
               <img 
-                src="/logo.png" 
-                alt="Liva Perfumes"
-                className="h-12 w-auto object-contain"
+                src={`${import.meta.env.BASE_URL}logo.png`} 
+                alt="Liva Perfumes Logo"
+                style={{ 
+                  height: '60px', 
+                  width: '65px',
+                  marginLeft: '-10px', 
+                  marginTop: '105px', 
+                  transform: 'scale(5.4)',
+                }}
               />
             </Link>
           </div>
