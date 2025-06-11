@@ -18,13 +18,13 @@ const heroImages = [
     ]
   },
   {
-    url: 'https://images.unsplash.com/photo-1595425300377-c1eef204b2eb?auto=format&fit=crop&q=80&w=2000',
+    url: 'https://i.pinimg.com/736x/10/64/6f/10646ff250d52d7544521af9a727b3c9.jpg',
     title: 'Luxury in Every Drop',
     subtitle: 'Experience the art of perfumery with our exclusive collections.',
     buttons: [
       {
         text: 'Catalog 1',
-        link: 'https://github.com',
+        link: 'https://www.youtube.com/',
         isExternal: true
       }
     ]
@@ -56,13 +56,16 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  const currentHeroImage = heroImages[currentSlide];
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Slideshow */}
+      {/* Hero Section */}
       <div className="relative h-[60vh] sm:h-[60vh] mt-16">
+        {/* Background Slides */}
         {heroImages.map((image, index) => (
           <div
-            key={index}
+            key={`slide-bg-${index}`}
             className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
@@ -75,48 +78,49 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-black/30 mix-blend-multiply" />
             </div>
-            
-            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-              <div className="max-w-3xl">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
-                  {image.title}
-                </h1>
-                <p className="mt-4 text-lg sm:text-xl text-gray-100">
-                  {image.subtitle}
-                </p>
-                <div className="mt-6 sm:mt-8 space-y-4">
-                  {image.buttons.map((button, buttonIndex) => (
-                    button.isExternal ? (
-                      <a
-                        key={buttonIndex}
-                        href={button.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 transition-colors"
-                      >
-                        {button.text}
-                      </a>
-                    ) : (
-                      <Link
-                        key={buttonIndex}
-                        to={button.link}
-                        className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 transition-colors"
-                      >
-                        {button.text}
-                      </Link>
-                    )
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         ))}
+
+        {/* Hero Content */}
+        <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div className="max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+              {currentHeroImage.title}
+            </h1>
+            <p className="mt-4 text-lg sm:text-xl text-gray-100">
+              {currentHeroImage.subtitle}
+            </p>
+            <div className="mt-6 sm:mt-8 space-y-4">
+              {currentHeroImage.buttons.map((button, buttonIndex) => (
+                button.isExternal ? (
+                  <a
+                    key={`btn-${currentSlide}-${buttonIndex}`}
+                    href={button.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 transition-colors"
+                  >
+                    {button.text}
+                  </a>
+                ) : (
+                  <Link
+                    key={`btn-${currentSlide}-${buttonIndex}`}
+                    to={button.link}
+                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-50 transition-colors"
+                  >
+                    {button.text}
+                  </Link>
+                )
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
           {heroImages.map((_, index) => (
             <button
-              key={index}
+              key={`indicator-${index}`}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/50'

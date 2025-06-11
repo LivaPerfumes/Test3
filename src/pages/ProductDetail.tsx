@@ -75,7 +75,7 @@ export default function ProductDetail() {
           {/* Product Info */}
           <div>
             <h1 className="text-3xl font-serif font-bold text-gray-900">{product.name}</h1>
-            <p className="mt-4 text-xl font-medium text-gray-900">${currentPrice}</p>
+            <p className="mt-4 text-xl font-medium text-gray-900">₹{currentPrice}</p>
             <p className="mt-4 text-gray-500">{product.description}</p>
 
             {/* Size Selection */}
@@ -99,7 +99,7 @@ export default function ProductDetail() {
                   >
                     <div className="text-center">
                       <span className="block font-bold">{sizeOption.size}</span>
-                      <span className="block mt-1">${sizeOption.price}</span>
+                      <span className="block mt-1">₹{sizeOption.price}</span>
                     </div>
                   </button>
                 ))}

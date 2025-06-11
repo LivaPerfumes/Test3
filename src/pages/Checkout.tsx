@@ -134,9 +134,9 @@ export default function Checkout() {
                   </div>
                   <div className="text-right">
                     <p className="font-medium text-gray-900">
-                      ${(item.product.price * item.quantity).toFixed(2)}
+                      ₹{(item.product.price * item.quantity).toFixed(2)}
                     </p>
-                    <p className="text-sm text-gray-500">${item.product.price} each</p>
+                    <p className="text-sm text-gray-500">₹{item.product.price} each</p>
                   </div>
                 </div>
               ))}
@@ -148,16 +148,16 @@ export default function Checkout() {
               <div className="space-y-2">
                 <div className="flex justify-between text-gray-600">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
                   <span>Shipping</span>
-                  <span>${shipping.toFixed(2)}</span>
+                  <span>₹{shipping.toFixed(2)}</span>
                 </div>
                 <div className="border-t pt-2 mt-2">
                   <div className="flex justify-between font-medium text-gray-900">
                     <span>Total</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>₹{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
@@ -338,13 +338,13 @@ export default function Checkout() {
                 {cart.map((item) => (
                   <div key={item.product.id} className="flex justify-between">
                     <span>{item.product.name} x {item.quantity}</span>
-                    <span>${(item.product.price * item.quantity).toFixed(2)}</span>
+                    <span>₹{(item.product.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
                 <div className="border-t pt-2 mt-2">
                   <div className="flex justify-between font-medium text-gray-900">
                     <span>Total</span>
-                    <span>${total.toFixed(2)}</span>
+                    <span>₹{total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
