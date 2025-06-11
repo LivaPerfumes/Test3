@@ -71,7 +71,7 @@ export const products: Product[] = [
     category: 'fresh',
     size: '100ml',
     //featured: true,
-    //isNew: true, //New Tag
+    isNew: true, //New Tag
     notes: {
       top: ['Bergamot, Lavender, Mandarin Orange'],
       middle: ['Cardamom, Pepper'],
@@ -97,7 +97,7 @@ export const products: Product[] = [
     type: 'attar',
     category: 'oodh',
     size: '100ml',
-    //featured: true,
+    featured: true,
     //isNew: true, //New Tag
     notes: {
       top: ['Bitter Almond, Saffron'],
