@@ -46,9 +46,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center mt-8">
-          <p className="text-lg font-semibold">©2025 Liva Perfumes</p>
+          <p className="text-lg font-semibold">©2025 Liva Perfumes </p>
         </div>
       </div>
     </footer>
   );
+
 }
