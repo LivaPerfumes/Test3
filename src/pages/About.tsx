@@ -71,7 +71,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900">Our History</h2>
               <p className="mt-4 text-lg text-gray-600">
-                Founded in 2024, Liva Perfumes has quickly established itself as a premier destination 
+                Founded in 2025, Liva Perfumes has quickly established itself as a premier destination 
                 for luxury fragrances. Our journey began with a simple vision: to create unique scents 
                 that capture moments and emotions.
               </p>

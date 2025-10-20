@@ -25,7 +25,7 @@ export const products: Product[] = [
     },
     sizes: [
       { size: '3ML', price: 29.99, inStock: true },
-      { size: '6ML', price: 49.99, inStock: true },
+      { size: '6ML', price: 349.00, inStock: true },
       { size: '12ML', price: 89.99, inStock: true }
     ]
   },
